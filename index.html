@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Project Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Form Input Flask (POST)</h2>
+
+        <form method="POST">
+            <label for="nama_input">Masukkan Nama / Teks:</label>
+            <input type="text" id="nama_input" name="nama_input" placeholder="Ketik sesuatu..." required>
+            <button type="submit">Kirim</button>
+        </form>
+
+        <div class="output-box">
+            <label id="label_hasil">Hasil: {{ hasil if hasil else "Belum ada input" }}</label>
+        </div>
+    </div>
+</body>
+</html>
